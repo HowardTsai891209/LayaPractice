@@ -4,7 +4,7 @@ import BlurFilter = Laya.BlurFilter;
 import Browser = Laya.Browser;
 import Handler = Laya.Handler;
 import WebGL = Laya.WebGL;
-export class blurFilter2 {
+export class blurFilter {
     private apePath: string = "../laya/assets/comp/clip_num.png";
     constructor() {
         // 不支持WebGL时自动切换至Canvas
