@@ -19,7 +19,7 @@ export default class GameConfig{
     constructor(){}
     static init(){
         var reg: Function = Laya.ClassUtils.regClass;
-        reg("./Scripts/Diolog.ts",Diolog);
+        reg("Scripts/Diolog.ts",Diolog);
     }
 }
 GameConfig.init();

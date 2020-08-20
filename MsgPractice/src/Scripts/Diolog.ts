@@ -1,6 +1,11 @@
 import { ui } from "./../ui/layaMaxUI";
 export default class DiaLab extends ui.test.SceneUI {
-    constructor(){super();}
+    static instance: DiaLab;
+
+    constructor(){
+    super();
+    DiaLab.instance = this;
+    }
 
     onEnable(): void {
         this.Diolog.on(Laya.Event.CLICK, this, this.ClickFn);
