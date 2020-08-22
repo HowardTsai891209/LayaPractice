@@ -6,14 +6,20 @@ export default class DiaLab extends ui.test.SceneUI {
     private lineComplete: boolean;
     private splitted: string;
     private showWord: number;
+    private story: string[] = ["一二三四五六七",
+        "一二三四五六七八",
+        "一二三四五六七八九",
+        "一二三四五六七八九十",
+        "一二三四五六七八九十1",
+        "一二三四五六七八九十12",
+    ];
     constructor() {
         super();
         DiaLab.instance = this;
     }
     isEnd(): void{
-        if(this.story[this.line] == undefined){    
-            clearInterval(this.showWord);          
-            this.Diolog.text = "換下一章";   
+        if(this.story[this.line] == undefined){ 
+            clearInterval(this.showWord);             
             this.Diolog.off(Laya.Event.CLICK, this, this.ClickFn);  
             return;     
         }else if (this.story[this.word] == undefined) {
@@ -23,13 +29,6 @@ export default class DiaLab extends ui.test.SceneUI {
             return;
         }
     }
-    private story: string[] = ["這是第1句話",
-            "這是第2句話",
-            "這是第3句話",
-            "這是第4句話",
-            "這是第5句話",
-            "這是第6句話",
-        ];
 
     onAwake(): void {
         this.word = 0;
@@ -40,35 +39,28 @@ export default class DiaLab extends ui.test.SceneUI {
 
     ShowWords() : void {
         this.showWord = setInterval(()=>{  
-            this.isEnd();   
             this.splitted = this.story[this.line][this.word];//.split("");   
             this.Diolog.text += this.splitted;//[this.word];
-            this.word ++;
-            if(this.story[this.word] == undefined){
+            this.word ++;            
+            if(this.story[this.line][this.word] == undefined){
                 clearInterval(this.showWord);
                 this.lineComplete = true;
             }
-            },350);
+            },150);
     }
 
     onEnable(): void {
         this.Diolog.on(Laya.Event.CLICK, this, this.ClickFn);
     } 
 
-    ClickFn(e: Laya.Event, value: number = 1): void {
-        this.isEnd();
-
-        if(!this.lineComplete){
-            this.lineComplete = !this.lineComplete;
-        }else{
-            this.lineComplete = !this.lineComplete;
-        }
-        
+    ClickFn(e: Laya.Event): void {
+        this.lineComplete = !this.lineComplete;
         if(this.lineComplete){
             clearInterval(this.showWord);
-            this.word = this.story[this.word].length;
+            this.word = this.story[this.line].length;
             this.Diolog.text = this.story[this.line];
         }else{
+            this.isEnd();
             this.ShowWords();
         }
     }

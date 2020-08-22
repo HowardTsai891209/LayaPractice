@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":12,
+    "selecteID":15,
     "searchKey":"Scene",
     "props":{"width":1920,"sceneColor":"#000000","runtime":"Scripts/Diolog.ts","height":1080},
     "nodeParent":-1,
-    "maxID":13,
+    "maxID":16,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -16,33 +16,31 @@
     "child":[
         {
             "x":15,
-            "type":"Label",
-            "searchKey":"Label,Diolog",
-            "props":{"y":641,"x":82,"wordWrap":true,"width":1754,"visible":true,"var":"Diolog","valign":"top","padding":"60,100,0,100","height":271,"fontSize":40,"font":"Microsoft YaHei","bold":true,"bgColor":"#f1f1f1","align":"left"},
-            "nodeParent":2,
-            "label":"Diolog",
-            "isOpen":true,
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":3,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
             "type":"Image",
-            "searchKey":"Image,MsgArea",
-            "props":{"y":211,"x":110,"width":1764,"var":"MsgArea","skin":"Dialog/Message.png","height":340},
+            "searchKey":"Image",
+            "props":{"y":529,"x":80,"width":1753,"skin":"Dialog/Message.png","height":395},
             "nodeParent":2,
-            "label":"MsgArea",
+            "label":"Image",
             "isOpen":true,
-            "isDirectory":false,
+            "isDirectory":true,
             "isAniNode":true,
-            "hasChild":false,
-            "compId":11,
+            "hasChild":true,
+            "compId":14,
             "child":[
-                ]
+                {
+                    "x":30,
+                    "type":"Label",
+                    "searchKey":"Label,Diolog",
+                    "props":{"y":67,"x":5,"wordWrap":true,"width":1737,"var":"Diolog","padding":"80,0,0,80","height":317,"fontSize":40,"font":"Microsoft YaHei","bold":true},
+                    "nodeParent":14,
+                    "label":"Diolog",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":15,
+                    "child":[
+                        ]
+                }]
         }],
     "animations":[
         {
