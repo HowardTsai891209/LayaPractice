@@ -5,6 +5,7 @@ import Scene=Laya.Scene;
 export module ui.test {
     export class SceneUI extends Laya.Scene {
         public Diolog:Laya.Label;
+        public MsgArea: Laya.Image;
         constructor(){ super()}
         createChildren():void {
             super.createChildren();
