@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":2,
-    "selecteID":15,
+    "selectedBox":14,
+    "selecteID":16,
     "searchKey":"Scene",
     "props":{"width":1920,"sceneColor":"#000000","runtime":"Scripts/Diolog.ts","height":1080},
     "nodeParent":-1,
-    "maxID":16,
+    "maxID":17,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -38,6 +38,20 @@
                     "isAniNode":true,
                     "hasChild":false,
                     "compId":15,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Label",
+                    "searchKey":"Label,Name",
+                    "props":{"y":8,"x":156,"width":279,"var":"Name","valign":"middle","height":69,"fontSize":60,"font":"Microsoft YaHei","bold":true,"align":"center"},
+                    "nodeParent":14,
+                    "label":"Name",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":16,
                     "child":[
                         ]
                 }]
