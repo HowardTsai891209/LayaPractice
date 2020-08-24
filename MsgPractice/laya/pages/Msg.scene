@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":14,
-    "selecteID":16,
+    "selectedBox":2,
+    "selecteID":18,
     "searchKey":"Scene",
     "props":{"width":1920,"sceneColor":"#000000","runtime":"Scripts/Diolog.ts","height":1080},
     "nodeParent":-1,
-    "maxID":17,
+    "maxID":22,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -52,6 +52,36 @@
                     "isAniNode":true,
                     "hasChild":false,
                     "compId":16,
+                    "child":[
+                        ]
+                }]
+        },
+        {
+            "x":15,
+            "type":"Button",
+            "searchKey":"Button,Btn1",
+            "props":{"y":376,"x":1333,"width":500,"var":"Btn1","stateNum":"1","skin":"Dialog/按鈕(未選)_修正.png","labelSize":60,"labelFont":"Microsoft YaHei","labelBold":true,"labelAlign":"center","label":"更換文本","height":159},
+            "nodeParent":2,
+            "label":"Btn1",
+            "isOpen":null,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":18,
+            "child":[
+                {
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/Scripts/Button1.ts",
+                    "searchKey":"Script,Button1",
+                    "removeAble":true,
+                    "props":{},
+                    "nodeParent":18,
+                    "label":"Button1",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":21,
                     "child":[
                         ]
                 }]

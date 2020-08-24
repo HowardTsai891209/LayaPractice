@@ -12,7 +12,7 @@ export default class GameConfig{
     static screenMode:string="none";
     static alignV:string="middle";
     static alignH:string="center";
-    static startScene:any="20200806.scene";
+    static startScene:any="PracticeScene.scene";
     static sceneRoot:string="";
     static debug:boolean=false;
     static stat:boolean=false;
