@@ -2,7 +2,7 @@ import Reader from "./Reader"
 export default class DiaLab extends Laya.Scene{
     static instance: DiaLab;//若其他程式要調用 則必須宣告
     private word: number;//文本中 每一句話個別的字數
-    private line: number;//文本中 句數
+    public line: number;//文本中 句數
     private lineComplete: boolean;//判斷 這句話是否講完
     private splitted: string;//把文本拆開
     private showWord: number;//讓文本一字一字出現的函式
@@ -10,7 +10,8 @@ export default class DiaLab extends Laya.Scene{
     public Diolog:Laya.Label;
     public Name:Laya.Label; 
     private reader: Reader;
-    public chaNum:number;
+    public chaNum: number;
+    private findNext: number;
     
     createChildren():void {
         super.createChildren();
@@ -28,11 +29,12 @@ export default class DiaLab extends Laya.Scene{
 
     onAwake(): void {
         this.reader = this.getComponent(Reader);
+        this.reader.read(this.chaNum);
         this.word = 0;
         this.line = 5;
         this.chaNum = 4;
+        this.findNext = 3;
         this.lineComplete = false;
-        this.reader.read(this.chaNum);
         this.ShowWords();
     }
 
@@ -51,19 +53,19 @@ export default class DiaLab extends Laya.Scene{
                 clearInterval(this.showWord);//關閉showWord
                 this.lineComplete = true;
             }
-        }, 150);
+        }, 120);
     }
 
     isEnd(): void {//判斷這句話是否講完 & 文本是否全部講完
-        if (this.story[this.line + 3] == undefined) { //文本是否結束
+        if (this.story[this.line + this.findNext] == undefined) { //文本是否結束
             this.Diolog.off(Laya.Event.CLICK, this, this.ClickFn);//關閉點擊事件
             console.log("結束");
             return;
         } else if (this.story[this.line][this.word] == undefined) {//此句是否結束
             this.word = 0;
             this.Diolog.text = "";
-            this.line+=3;//跳下一句話
-            this.chaNum+=3;
+            this.line+=this.findNext;//跳下一句話
+            this.chaNum+=this.findNext;
             return;
         }
     }
