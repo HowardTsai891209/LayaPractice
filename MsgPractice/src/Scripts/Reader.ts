@@ -3,15 +3,21 @@ import commandReader from "./commandReader"
 export default class Reader extends Laya.Script{
     public nameStart: number;
     public lineStart: number;
+    private comReader: commandReader;
     // private finder: number;
     private storyPath: string = "../laya/assets/res/test.csv";
     constructor() {
         super();
     }
 
+    onAwake(): void {
+        this.comReader = this.owner.getComponent(commandReader)
+    }
+
     read(Num?: number): void {
         Laya.loader.load(this.storyPath, new Laya.Handler(this, (e) => {      
             DiaLab.instance.nameCase(e.split(",")[Num]);
+            this.comReader.readCom(e.split(","));
             if (DiaLab.instance.onlyOnce) return;
             DiaLab.instance.story.length = 0;
             DiaLab.instance.story = DiaLab.instance.story.concat(e.split(","));

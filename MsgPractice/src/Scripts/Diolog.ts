@@ -10,9 +10,12 @@ export default class DiaLab extends Laya.Scene{
     public chaNum: number;
     public findNext: number;//excel扣掉Command有幾列就要多少 用來找到下一個相同欄位
     public onlyOnce: boolean;//讓Reader取出文本的動作不要重複執行
+    public faceNum: number;
     public Diolog: Laya.Label;
     public Name: Laya.Label; 
     private reader: Reader;
+    // private comReader: commandReader;
+
     
     createChildren():void {
         super.createChildren();
@@ -29,12 +32,14 @@ export default class DiaLab extends Laya.Scene{
     }
 
     onAwake(): void {
+        // this.comReader = this.getComponent(commandReader);
         this.reader = this.getComponent(Reader);
         this.onlyOnce = false;
-        this.line = 7;
+        this.line = 8;
         this.word = 0;
-        this.chaNum = 6;
-        this.findNext = 4;
+        this.chaNum = 7;
+        this.findNext = 5;
+        this.faceNum = 9;
         this.lineComplete = false;
         this.ShowWords();
     }   
@@ -68,6 +73,7 @@ export default class DiaLab extends Laya.Scene{
             this.Diolog.text = "";
             this.line+=this.findNext;//下一句話
             this.chaNum+=this.findNext;//下一個人
+            this.faceNum+=this.findNext;//下一個表情
             return;
         }
     }
