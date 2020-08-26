@@ -1,12 +1,12 @@
 {
     "x":0,
     "type":"Scene",
-    "selectedBox":2,
-    "selecteID":25,
+    "selectedBox":14,
+    "selecteID":28,
     "searchKey":"Scene",
     "props":{"width":1920,"sceneColor":"#000000","runtime":"Scripts/Diolog.ts","height":1080},
     "nodeParent":-1,
-    "maxID":28,
+    "maxID":29,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -52,6 +52,20 @@
                     "isAniNode":true,
                     "hasChild":false,
                     "compId":16,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Image",
+                    "searchKey":"Image,Face",
+                    "props":{"y":114,"x":21,"width":338,"var":"Face","height":268},
+                    "nodeParent":14,
+                    "label":"Face",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":28,
                     "child":[
                         ]
                 }]

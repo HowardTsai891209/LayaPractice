@@ -2,6 +2,7 @@
 import Diolog from "./Scripts/Diolog"
 import Button1 from "./Scripts/Button1"
 import Reader from "./Scripts/Reader"
+import commandReader from "./Scripts/commandReader"
 /*
 * 游戏初始化配置;
 */
@@ -24,6 +25,7 @@ export default class GameConfig{
         reg("Scripts/Diolog.ts",Diolog);
         reg("Scripts/Button1.ts",Button1);
         reg("Scripts/Reader.ts",Reader);
+        reg("Scripts/commandReader.ts",commandReader);
     }
 }
 GameConfig.init();
