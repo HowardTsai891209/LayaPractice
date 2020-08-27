@@ -7,15 +7,15 @@ export default class DiaLab extends Laya.Scene{
     private splitted: string;//把文本拆開
     private showWord: number;//讓文本一字一字出現的函式
     public story: string[] = [""];//文本
-    public chaNum: number;
+    public chaNum: number;//文本中 名字的位置
     public findNext: number;//excel扣掉Command有幾列就要多少 用來找到下一個相同欄位
     public onlyOnce: boolean;//讓Reader取出文本的動作不要重複執行
-    public faceNum: number;
-    public Diolog: Laya.Label;
-    public Name: Laya.Label; 
-    private reader: Reader;
-    // private comReader: commandReader;
-
+    public faceNum: number;//文本中 表情的位置
+    public comNum: number;//文本中command的位置
+    public Diolog: Laya.Label;//對話內容顯示區域
+    public Name: Laya.Label; //名字顯示區域
+    private reader: Reader;//讀文本
+    public Face: Laya.Image;//表情顯示區域
     
     createChildren():void {
         super.createChildren();
@@ -31,15 +31,15 @@ export default class DiaLab extends Laya.Scene{
         this.Diolog.on(Laya.Event.CLICK, this, this.ClickFn);
     }
 
-    onAwake(): void {
-        // this.comReader = this.getComponent(commandReader);
+    onAwake(): void {        
         this.reader = this.getComponent(Reader);
         this.onlyOnce = false;
-        this.line = 8;
-        this.word = 0;
-        this.chaNum = 7;
+        this.comNum = 10;
+        this.chaNum = 12;
+        this.line = 13;
+        this.faceNum = 14;
         this.findNext = 5;
-        this.faceNum = 9;
+        this.word = 0;
         this.lineComplete = false;
         this.ShowWords();
     }   
@@ -74,6 +74,7 @@ export default class DiaLab extends Laya.Scene{
             this.line+=this.findNext;//下一句話
             this.chaNum+=this.findNext;//下一個人
             this.faceNum+=this.findNext;//下一個表情
+            this.comNum+=this.findNext;//下一個指令
             return;
         }
     }

@@ -2,6 +2,7 @@
 import Diolog from "./Scripts/Diolog"
 import Button1 from "./Scripts/Button1"
 import Reader from "./Scripts/Reader"
+import FaceReader from "./Scripts/FaceReader"
 import commandReader from "./Scripts/commandReader"
 /*
 * 游戏初始化配置;
@@ -9,10 +10,10 @@ import commandReader from "./Scripts/commandReader"
 export default class GameConfig{
     static width:number=1920;
     static height:number=1080;
-    static scaleMode:string="full";
+    static scaleMode:string="exactfit";
     static screenMode:string="none";
     static alignV:string="middle";
-    static alignH:string="left";
+    static alignH:string="center";
     static startScene:any="Msg.scene";
     static sceneRoot:string="";
     static debug:boolean=false;
@@ -25,6 +26,7 @@ export default class GameConfig{
         reg("Scripts/Diolog.ts",Diolog);
         reg("Scripts/Button1.ts",Button1);
         reg("Scripts/Reader.ts",Reader);
+        reg("Scripts/FaceReader.ts",FaceReader);
         reg("Scripts/commandReader.ts",commandReader);
     }
 }
