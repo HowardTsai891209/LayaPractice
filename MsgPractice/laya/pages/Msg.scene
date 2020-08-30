@@ -2,11 +2,11 @@
     "x":0,
     "type":"Scene",
     "selectedBox":2,
-    "selecteID":18,
+    "selecteID":14,
     "searchKey":"Scene",
     "props":{"width":1920,"sceneColor":"#000000","runtime":"Scripts/Diolog.ts","height":1080},
     "nodeParent":-1,
-    "maxID":37,
+    "maxID":47,
     "label":"Scene",
     "isOpen":true,
     "isDirectory":true,
@@ -74,36 +74,6 @@
         },
         {
             "x":15,
-            "type":"Button",
-            "searchKey":"Button,Btn1",
-            "props":{"y":483,"x":1323,"width":500,"var":"Btn1","stateNum":"1","skin":"Dialog/按鈕(未選)_修正.png","labelSize":60,"labelFont":"Microsoft YaHei","labelBold":true,"labelAlign":"center","label":"更換文本","height":159},
-            "nodeParent":2,
-            "label":"Btn1",
-            "isOpen":false,
-            "isDirectory":true,
-            "isAniNode":true,
-            "hasChild":true,
-            "compId":18,
-            "child":[
-                {
-                    "type":"Script",
-                    "switchAble":true,
-                    "source":"src/Scripts/Button1.ts",
-                    "searchKey":"Script,Button1",
-                    "removeAble":true,
-                    "props":{"enabled":true},
-                    "nodeParent":18,
-                    "label":"Button1",
-                    "isDirectory":false,
-                    "isAniNode":true,
-                    "hasChild":false,
-                    "compId":21,
-                    "child":[
-                        ]
-                }]
-        },
-        {
-            "x":15,
             "type":"Script",
             "switchAble":true,
             "source":"src/Scripts/Reader.ts",
@@ -152,6 +122,161 @@
             "compId":35,
             "child":[
                 ]
+        },
+        {
+            "x":15,
+            "type":"Script",
+            "switchAble":true,
+            "source":"src/Scripts/ButtonObject.ts",
+            "searchKey":"Script,ButtonObject",
+            "removeAble":true,
+            "props":{},
+            "nodeParent":2,
+            "label":"ButtonObject",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":46,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Button",
+            "searchKey":"Button,Btn1",
+            "props":{"y":80,"x":1305,"width":500,"var":"Btn1","stateNum":"1","skin":"Dialog/按鈕(未選)_修正.png","labelSize":60,"labelFont":"Microsoft YaHei","labelBold":true,"labelAlign":"center","label":"選項1","height":200},
+            "nodeParent":2,
+            "label":"Btn1",
+            "isOpen":false,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":18,
+            "child":[
+                {
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/Scripts/Button1.ts",
+                    "searchKey":"Script,Button1",
+                    "removeAble":true,
+                    "props":{"enabled":true},
+                    "nodeParent":18,
+                    "label":"Button1",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":21,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/Scripts/ButtonObject.ts",
+                    "searchKey":"Script,ButtonObject",
+                    "removeAble":true,
+                    "props":{},
+                    "nodeParent":18,
+                    "label":"ButtonObject",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":43,
+                    "child":[
+                        ]
+                }]
+        },
+        {
+            "x":15,
+            "type":"Button",
+            "searchKey":"Button,Btn2",
+            "props":{"y":472,"x":1305,"width":500,"var":"Btn2","stateNum":"1","skin":"Dialog/按鈕(未選)_修正.png","labelSize":60,"labelFont":"Microsoft YaHei","labelBold":true,"labelAlign":"center","label":"選項2","height":200},
+            "nodeParent":2,
+            "label":"Btn2",
+            "isOpen":null,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":37,
+            "child":[
+                {
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/Scripts/Button2.ts",
+                    "searchKey":"Script,Button2",
+                    "removeAble":true,
+                    "props":{},
+                    "nodeParent":37,
+                    "label":"Button2",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":41,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/Scripts/ButtonObject.ts",
+                    "searchKey":"Script,ButtonObject",
+                    "removeAble":true,
+                    "props":{},
+                    "nodeParent":37,
+                    "label":"ButtonObject",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":44,
+                    "child":[
+                        ]
+                }]
+        },
+        {
+            "x":15,
+            "type":"Button",
+            "searchKey":"Button,Btn3",
+            "props":{"y":272,"x":1305,"width":500,"var":"Btn3","stateNum":"1","skin":"Dialog/按鈕(未選)_修正.png","labelSize":60,"labelFont":"Microsoft YaHei","labelBold":true,"labelAlign":"center","label":"選項3","height":200},
+            "nodeParent":2,
+            "label":"Btn3",
+            "isOpen":false,
+            "isDirectory":true,
+            "isAniNode":true,
+            "hasChild":true,
+            "compId":38,
+            "child":[
+                {
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/Scripts/Button3.ts",
+                    "searchKey":"Script,Button3",
+                    "removeAble":true,
+                    "props":{},
+                    "nodeParent":38,
+                    "label":"Button3",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":42,
+                    "child":[
+                        ]
+                },
+                {
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/Scripts/ButtonObject.ts",
+                    "searchKey":"Script,ButtonObject",
+                    "removeAble":true,
+                    "props":{},
+                    "nodeParent":38,
+                    "label":"ButtonObject",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":45,
+                    "child":[
+                        ]
+                }]
         }],
     "animations":[
         {
