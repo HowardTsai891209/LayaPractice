@@ -17,10 +17,11 @@ export default class Reader extends Laya.Script{
     }
 
     read(Num?: number): void {
-        Laya.loader.load(this.storyPath, new Laya.Handler(this, (e) => {            
-            this.comReader.readCom(e.split(","));
-            this.faReader.readFace(e.split(","));     
-            DiaLab.instance.nameCase(e.split(",")[Num]);
+        Laya.loader.load(this.storyPath, new Laya.Handler(this, (e) => {
+            let text = e.split(",");
+            this.comReader.readCom(text);
+            this.faReader.readFace(text);     
+            DiaLab.instance.nameCase(text[Num]);
             if (DiaLab.instance.onlyOnce) return;
             DiaLab.instance.story.length = 0;
             DiaLab.instance.story = DiaLab.instance.story.concat(e.split(","));
