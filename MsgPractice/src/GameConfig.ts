@@ -13,7 +13,7 @@ import Button3 from "./Scripts/Button3"
 export default class GameConfig{
     static width:number=1920;
     static height:number=1080;
-    static scaleMode:string="exactfit";
+    static scaleMode:string="fixedwidth";
     static screenMode:string="none";
     static alignV:string="middle";
     static alignH:string="center";

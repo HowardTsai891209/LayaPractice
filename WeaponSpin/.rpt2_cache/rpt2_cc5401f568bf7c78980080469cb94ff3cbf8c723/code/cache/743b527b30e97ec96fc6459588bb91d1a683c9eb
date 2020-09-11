@@ -1,0 +1,4 @@
+{
+  "code": "export default class Weapon1 extends Laya.Script {\r\n    constructor() {\r\n        super();\r\n    }\r\n    onTriggerEnter(other, self, contact) {\r\n        console.log(2);\r\n        if (other.label === \"Weapon1\") {\r\n            console.log(1);\r\n        }\r\n    }\r\n}\r\n",
+  "references": []
+}

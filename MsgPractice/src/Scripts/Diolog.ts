@@ -68,7 +68,7 @@ export default class DiaLab extends Laya.Scene{
                 this.lineComplete = true;
                 this.comReader.showBtn();
             }
-        }, 150);
+        }, 50);
     }
 
     isEnd(): void {//判斷這句話是否講完 & 文本是否全部講完
@@ -101,15 +101,8 @@ export default class DiaLab extends Laya.Scene{
             this.isEnd();            
             this.ShowWords();
         }
-    }
-
-    // btnClick(): void {
-    //     this.Diolog.on(Laya.Event.CLICK, this, this.ClickFn);
-    //     this.Btn1.visible = false;
-    //     this.Btn2.visible = false;
-    //     this.Btn3.visible = false;
-    // }
-            
+    }       
+  
     nameCase(name?: string): void {//抓取開頭代號 改變名字
         switch (name) {
             case "吳俞恆":

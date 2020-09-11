@@ -1,0 +1,4 @@
+{
+  "code": "export default class Spin extends Laya.Scene {\r\n    constructor() {\r\n        super();\r\n        this.rotateSpeed = 10;\r\n        Spin.instance = this;\r\n    }\r\n    createChildren() {\r\n        super.createChildren();\r\n        this.loadScene(\"WeaponSpin\");\r\n    }\r\n    onAwake() {\r\n        Laya.timer.frameLoop(1, this, this.SpinFn);\r\n    }\r\n    onEnable() {\r\n        this.spinWheel.on(Laya.Event.CLICK, this, this.StopFn);\r\n    }\r\n    SpinFn() {\r\n        this.spinWheel.rotation += this.rotateSpeed;\r\n    }\r\n    StopFn() {\r\n        Laya.timer.loop(50, this, function () {\r\n            this.rotateSpeed *= 0.95;\r\n            if (this.rotateSpeed <= 0.1) {\r\n                Laya.timer.clear(this, this.SpinFn);\r\n            }\r\n        });\r\n    }\r\n}\r\n",
+  "references": []
+}

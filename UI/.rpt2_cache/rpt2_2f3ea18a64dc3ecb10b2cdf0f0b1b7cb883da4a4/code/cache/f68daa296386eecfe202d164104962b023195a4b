@@ -1,0 +1,4 @@
+{
+  "code": "export default class HealthBar extends Laya.Scene {\r\n    constructor() {\r\n        super();\r\n        HealthBar.instance = this;\r\n    }\r\n    createChildren() {\r\n        super.createChildren();\r\n        this.loadScene(\"UI\");\r\n    }\r\n    onAwake() {\r\n        console.log(this.HealthUI);\r\n    }\r\n}\r\n",
+  "references": []
+}

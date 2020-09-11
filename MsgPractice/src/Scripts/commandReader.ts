@@ -26,6 +26,7 @@ export default class commandReader extends Laya.Script{
             case "Jump":
                 DiaLab.instance.selNum = DiaLab.instance.comNum+1;
                 this.btnObj.selectionJump();
+                DiaLab.instance.ClickFn();
                 break;
             case "Wait":
                 var waitSecond: number = +DiaLab.instance.story[DiaLab.instance.waitNum] * 1000;
